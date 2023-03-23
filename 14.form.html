@@ -32,10 +32,74 @@
                 <option value="제주도">제주도</option>
             </select>
         </p>
+        <p>
+            <label for="male">남성</label>
+            <input type="radio" id="male" name="gender" value="남성">
+
+            <label for="male">여성</label>
+            <input type="radio" id="female" name="gender" value="여성">
+        </p>
+        <p>
+            <span>관심 사항</span>
+            <label for="HTML">HTML</label>
+            <input type="checkbox" id="HTML" name="interest" value="HTML">
+            <label for="CSS">CSS</label>
+            <input type="checkbox" id="CSS" name="interest" value="CSS">
+            <label for="Javascript">Javascript</label>
+            <input type="checkbox" id="Javascript" name="interest" value="Javascript">
+        </p>
+        <label for="message">인사말</label>
+        <textarea name="message" id="message" cols="30" rows="10"></textarea>
+        <p>
+            <label for="profile">이미지 등록</label>
+            <input type="file" id="profile" name="profile">
+        </p>
+        <fieldset>
+            <legend>HTML5 type</legend>
+            <p>
+                <label for="website">웹사이트:</label>
+                <input type="url" id="website" name="website">
+            </p>
+            <p>
+                <label for="birth">생년월일:</label>
+                <input type="date" id="birth" name="birth">
+            </p>
+            <p>
+                <label for="langs">학습할 언어 선택</label>
+                <input id="langs" name="langs" list="mylist">
+                <datalist id="mylist">
+                    <option value="html">
+                    <option value="css">
+                    <option value="javascript">
+                    <option value="jQuery">
+                </datalist>
+            </p>
+            <p>
+                <label for="career">경력기간</label>
+                <input type="number" id="career" name="career" min="0" max="20" step="2">
+            </p>
+            <p>
+                <label for="language">학습할 언어 선택</label>
+                <select name="language" id="language">
+                    <optgroup label="frontend">
+                        <option value="html">html</option>
+                        <option value="css">css</option>
+                        <option value="javascript">javascript</option>
+                    </optgroup>
+                    <optgroup label="backend">
+                        <option value="php">php</option>
+                        <option value="asp">asp</option>
+                        <option value="jsp">jsp</option>
+                    </optgroup>
+                </select>
+            </p>
+        </fieldset>
+
     </fieldset>
         <p>
             <button><img src="https://cdn0.iconfinder.com/data/icons/round-ui-icons/512/tick_red.png" alt="submit"></button>
         </p>
+        
         </form>
     </body>
 </html>
