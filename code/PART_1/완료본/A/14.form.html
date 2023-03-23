@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>form</title>
+</head>
+
+<body>
+    <h1>Join form</h1>
+    <form>
+        <fieldset>
+            <legend>필수 사항</legend>
+            <p>
+                <label for="username">Name : </label>
+                <input type="text" id="username">
+            </p>
+            <p>
+                <label for="useremail">Email: </label>
+                <input type="email" id="useremail" required>
+            </p>
+            <p>
+            <label for="userpw">Password : </label>
+            <input type="password" id="userpw" required>
+            </p>
+        </fieldset>               
+
+        <fieldset>
+            <legend>옵션사항</legend>
+            <p>
+                <label for="address">주소</label>
+                <select name="address" id="address">
+                    <option value="서울시">서울시</option>
+                    <option value="경기도">경기도</option>
+                    <option value="제주도">제주도</option>
+                </select>
+            </p>
+            <p>
+                <span>성별</span>
+                <label for="male">남성</label>
+                <input type="radio" id="male" name="gender" value="남성">
+                <label for="female">여성</label>
+                <input type="radio" id="female" name="gender" value="여성">
+            </p>
+            <p>
+                <span>관심 사항</span>
+                <label for="HTML">HTML</label>
+                <input type="checkbox" id="HTML" name="interest" value="HTML">
+                <label for="CSS">CSS</label>
+                <input type="checkbox" id="CSS" name="interest" value="CSS">
+                <label for="Javascript">Javascript</label>
+                <input type="checkbox" id="Javascript" name="interest" value="Javascript">
+            </p>
+            <p>
+                <label for="message">인사말</label>
+                <textarea name="message" id="message" cols="30" rows="10"></textarea>
+            </p>
+            <p>
+                <label for="profile">이미지 등록</label>
+                <input type="file" id="profile" name="profile">
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>HTML5 type</legend>
+            <p>
+                <label for="website">웹사이트: </label>
+                <input type="url" id="website" name="website">
+            </p>
+            <p>
+                <label for="birth">생년월일: </label>
+                <input type="date" id="birth" name="birth">
+            </p>
+            <p>
+                <label for="langs">학습할 언어 선택</label>
+                <input id="langs" name="langs" list="mylist">
+                <datalist id="mylist">
+                <option value="html">
+                <option value="css">
+                <option value="javascript">
+                <option value="jQuery">
+                </datalist>
+            </p>    
+            <p>
+                <label for="career">경력기간</label>
+                <input type="number" id="career" name="career" min="0" max="20" step="2">
+            </p>
+            <p>
+                <label for="language">학습할 언어 선택</label>
+                <select name="language" id="language">
+                <optgroup label="frontend">
+                    <option value="html">html</option>
+                    <option value="css">css</option>
+                    <option value="javascript">javascript</option>
+                </optgroup>
+                <optgroup label="backend">
+                    <option value="php">php</option>
+                    <option value="asp">asp</option>
+                    <option value="jsp">jsp</option>
+                </optgroup>
+                </select>
+            </p>                                           
+        </fieldset>
+        <p>
+            <input type="submit" value="가입하기">
+        </p>        
+    </form>
+</body>
+
+
+</html>
