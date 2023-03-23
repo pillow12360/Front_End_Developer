@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>form</title>
+    </head>
+    <body>
+        <h1>Join form</h1>
+        <form action="#" method="get">
+            <fieldset>
+            <legend>필수 사항</legend>
+        <p>
+        <label for="username">Name : </label>
+        <input type="text" id="username" required>
+        </p>
+        <p>
+            <lable for="useremail">Email: </lable>
+            <input type="email" id="useremail" required>
+        </p>
+        <p>
+        <label for="userpw">Password : </label>
+        <input type="password" id="userpw" required>
+        </p>
+    </fieldset>
+    <fieldset>
+        <legend>옵션 사항</legend>
+        <p>
+            <label for="address">주소</label>
+            <select name="address" id="address">
+                <option value="서울시">서울시</option>
+                <option value="경기도">경기도</option>
+                <option value="제주도">제주도</option>
+            </select>
+        </p>
+    </fieldset>
+        <p>
+            <button><img src="https://cdn0.iconfinder.com/data/icons/round-ui-icons/512/tick_red.png" alt="submit"></button>
+        </p>
+        </form>
+    </body>
+</html>
