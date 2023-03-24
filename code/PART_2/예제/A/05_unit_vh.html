@@ -7,7 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>viewport unit</title>
     <style>
-
+        html,body,.parent{
+            height:100%; 
+        }
+        .child{
+            height:50%;
+            background:green;
+        }
     </style>
 </head>
 
@@ -18,3 +24,11 @@
 </body>
 
 </html>
+
+<!--선택자는 한번에 여러개 지정할 수 있고 %와 vw의 차이점을 이해한다. 
+vh = viewport height
+
+부모요소의 비율이 100를 사용해야 자식을 50퍼센트 활용할 수 있어서 100%로 지정 
+
+50vh : 부모요소의 크기와 상관없이 화면 전체에서 50%의 비율을 사용한다.
+-->

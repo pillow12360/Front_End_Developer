@@ -7,7 +7,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>viewport unit</title>
     <style>
-
+        header{
+            width: 100vw;
+            background-color : silver;
+        }
+        .parent{
+            width:600px;
+            background-color : silver;
+        }
+        .child{
+            width:50%;
+            background-color : green;
+        }
+        .child2{
+            width:50vw;
+            background-color: green;
+        }
     </style>
 </head>
 
@@ -23,3 +38,12 @@
 </body>
 
 </html>
+
+<!-- vw 단위를 이해한다. vw는 viewport 너비와 높이에서의 비율을 말한다.
+50vw라면 viewport 전체 가로 너비에서 50%의 너비를 차지한다는 뜻
+
+%와 vw와의 차이점은 ?
+
+%는 부모 영역에서 초기화된 600픽셀에서의 50퍼센트 비율로 나타나고
+vw는 문서 전체의 넓이에서 50%의 비율을 말한다.
+-->
