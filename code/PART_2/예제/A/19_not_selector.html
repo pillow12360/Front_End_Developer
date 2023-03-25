@@ -7,7 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>부정 선택자</title>
     <style>
-
+        header *:not(h1) {
+            color : green;
+        }
+        /* 해더의 모든 요소를 선택하는데 h1 태그만 제외 */
+        li:not(:last-child){
+            background-color: silver;
+        }
     </style>
 </head>
 
@@ -28,3 +34,10 @@
 </body>
 
 </html>
+<!-- 부정 서낵자 
+:not(선택자)
+
+선택자의 반대 요소를 선택
+
+238p
+-->

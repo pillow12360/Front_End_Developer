@@ -7,7 +7,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pseudo-element Selector</title>
     <style>
+        h1::before {
+            content:'-';
+            color : blue;
+        }
+        /* 제목의 앞부분에 하이픈 추가하고 스타일 변경 */
+        h1::after {
+            content:'- ';
+        color:blue;        }
+        /* 제목의 뒷부분에 하이픈 추가 */
+        h2::before{
+            content:'\2C2';
+        }
+        /* h2 앞부분에 화살표 유니코드 추가 */
 
+        /* 참고로 ::before과 ::after로 추가한 요소는 모두 인라인 성격이 있다. 글씨처럼 작동함 블록 요소 성격으로 변경하려면 disply 속성을 block 또는 inline-block으로 설정해야함 */
     </style>
 </head>
 
@@ -17,3 +31,9 @@
 </body>
 
 </html>
+<!-- 의사 요소 선택자 
+가상으로 만들어진 요소를 선택하는 것 
+::before, ::after
+
+226p
+-->

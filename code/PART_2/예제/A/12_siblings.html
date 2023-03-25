@@ -7,7 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Siblings - CSS Selector</title>
     <style>
-
+        h1+ul {
+            background-color:silver;
+        }
+        h2~ul{
+            background-color: green;
+        }
     </style>
 </head>
 
@@ -33,3 +38,28 @@
 </body>
 
 </html>
+
+<!-- 인접 형제 선택자
+    A+B {
+        요소:값;
+    }
+
+    h1 바로 뒤에 따라오는 ul 요소만 변경하기 위해 인접 형제 선택자 사용 -->
+
+    <!-- 일반 형제 선택자
+A~B {
+    속성 : 값;
+}
+
+h2~ul{
+    background-color : green;
+}
+: h2 태그의 형제 요소인 ul, h3 , ul 중 ul 태그만 선택되어 스타일 변경됨
+
+h3의 자식인 ul도 선택됨!
+-->
+
+<!-- 그룹 선택자
+여러 속성에 동일한 스타일 지정하고자 할 때는 선택자를 콤마로 구분하여 나열
+h1, h2, .btn { 요소 : 값;}
+-->

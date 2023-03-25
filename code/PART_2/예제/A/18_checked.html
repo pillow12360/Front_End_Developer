@@ -7,7 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>checked Selector</title>
     <style>
-
+        input:checked+label {
+            background:silver;
+        }
+        #policy:target{
+            background : green;
+            color : #fff;
+        }
+        button:disabled {
+            background : #000;
+            color : #ebebeb;
+        }
     </style>
 </head>
 
@@ -33,3 +43,10 @@
 </body>
 
 </html>
+<!-- 상태 선택자
+주로 input, button 태그에 많이 사용됨 
+
+input:disabled 사용불가 상태인 input 요소 선택
+Input:checked 체크된 input 요소 선택 
+:target 클릭된 링크의 타겟을 받은 요소 선택 
+-->

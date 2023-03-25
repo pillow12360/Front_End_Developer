@@ -7,7 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>nth-child Selector</title>
     <style>
-
+        li:first-child,
+        li:last-child,
+        li:nth-child(3){
+            text-decoration:underline;
+        }        
+        /* 첫 번째 요소 , 마지막 요소 , 3번째요소 선택 */
+        li:nth-child(even){
+            background: silver;
+        }
     </style>
 </head>
 
@@ -22,3 +30,18 @@
 </body>
 
 </html>
+<!-- 일반 구조 선택자
+형제 요소에서 인데스 번호를 이용하여 요소를 선택한다.
+
+선택자:nth-child
+
+:first-child 선택자 중 첫 번째 요소 선택 
+:last-child 선택자 중 마지막 요소를 선택
+:nth-child(수열)  선택자 중 수열 번째의 요소 선택
+:nth-last-child(수열) 선택자 중 마지막에서 수열 번째의 요소를 선택 
+
+230p
+-->
+
+
+

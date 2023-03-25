@@ -7,7 +7,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pseudo-class Selector</title>
     <style>
-
+h1:hover{
+    background:silver;
+}
+/* 마우스를 위에 올렸을 때 대표적인 hover */
+:link{
+    font-size:20px;
+    text-decoration:none;
+    font-weight: bold;
+}
+/* 모든 링크들 선택 */
+:visited{
+    color:green;
+}/* 방문한 사이트 */
+a:focus {
+    background:blue;
+    color:#fff;
+}
+/* tap 키로 포커스가 적용되면 파란색 배경에 흰색 글씨 */
+a:active {
+    background : #000;
+    color : #f00;
+}
+/* 누른 순간은 블랙 배경에 빨간색 글씨 */
+input, button {
+    outline:none;
+}
+/* 일단 기본 포커스 기능을 없앤 다음 해야 적용됨 */
+input:focus, button:focus{
+    background: green;
+    color : #fff;
+}
+/* 포커스 했을 때, 스타일 변경 */
+form:focus-within{
+    background:silver;
+}
+/* 자식 요소 중 포커스가 적용되면 해당 요소의 부모 요소의 스타일 변경 즉, form의 스타일 배경색 변경  */
     </style>
 </head>
 
@@ -23,3 +58,10 @@
 </body>
 
 </html>
+
+<!-- 의사 클래스 선택자
+:hover
+
+선택자:hover
+244p
+-->

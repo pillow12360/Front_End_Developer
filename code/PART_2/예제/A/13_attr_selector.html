@@ -7,7 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Attribute - CSS Selector</title>
     <style>
+  [target]{
+    text-decoration: none;
+  } 
+  /*  target 속성이 있는 것들 선택 */
 
+  [target="_blank"] {
+    background: silver;
+  }
+  /* target 속성 중 값이 _black 인 속성 선택 */
+[class^="inner"]{
+    font-weight: bold;
+}
+/* 클래스 속성 중에서 inner 단어가 포함된 속성 선택 */
     </style>
 </head>
 
@@ -21,3 +33,11 @@
 </body>
 
 </html>
+
+<!-- 속성 선택자
+[속성 명]{}
+[속성 명="값"]
+[속성 명^="값"]
+
+219p
+-->

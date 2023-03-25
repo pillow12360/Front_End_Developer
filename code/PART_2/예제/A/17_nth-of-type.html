@@ -7,7 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>nth-child Selector</title>
     <style>
+        /* h2:fist-child{
+            background: silver;
+        } */
+        /* 적용되지 않음 첫 번째 자식 요소 중 h2 태그를 찾기 때문 */
 
+        h2:first-of-type{
+            background:silver;
+        }
+        /* 처음 나오는 h2 태그를 선택 하는 것 */
     </style>
 </head>
 
@@ -20,3 +28,12 @@
 </body>
 
 </html>
+
+
+<!-- 형태 구조 선택자
+
+같은 종류들 중 인덱스 번호를 이용하여 요소들 선택
+
+:nth-of-type
+
+-->
