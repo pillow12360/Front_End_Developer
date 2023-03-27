@@ -6,8 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>List Style</title>
-    <style>
-
+    <style> 
+        nav>ul>li {list-style-type:square;}
+        nav>ul>li>ul>li {list-style: none;}
+        /*  */
+        nav li li li{list-style-type: decimal;}
+        /* 숫자형으로 변경 */
+        ol li{list-style: '-';}
+        /* 타이픈 으로 변경 */
+        .menu li{list-style-type: '\1F44D';}
+        /* 아이콘으로 변경 */
     </style>
 </head>
 
@@ -48,3 +56,7 @@
 </body>
 
 </html>
+<!--  
+    리스트 스타일 변경
+    
+    283p -->

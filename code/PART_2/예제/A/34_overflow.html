@@ -11,6 +11,32 @@
             width: 400px;
             border: 1px solid #ccc;
         }
+        div p{
+            width: 450px;
+        }
+        /* p태그를 부s모보다 크게 설정하여 범위를 벋어남 */
+        .auto {
+            overflow:auto;
+        }
+        /* overflow:auto 
+        넘친만큼 스크롤 바를 생성시켜줌 */
+        .hidden{
+            overflow:hidden;
+        }
+        /* 넘친 부분 가려짐 */
+        .scroll{
+            overflow:scroll;
+        }
+        /* 넘치지 않아도 스크롤 영역 생김 가로도 생김*/
+        .xaxis{
+            overflow-x:hidden;
+        }
+        /* 가로 방향으로만 넘치는 요소 가림 */
+        .yaxis{
+            height:60px;
+            overflow-y:hidden;
+        }
+        /* 세로 방향으로 60픽셀로 설정 후 넘치는 부분 가림 */
     </style>
 </head>
 
@@ -54,3 +80,6 @@
 </body>
 
 </html>
+<!-- overflow
+자식 요소의 크기가 부모 요소의 크기보다 클 경우 넘치는 부분을 처리할지 설정하는 것
+-->
