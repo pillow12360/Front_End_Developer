@@ -7,7 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>font-face</title>
     <style>
-
+        @font-face{
+            font-family: 'Nanum Gothic';
+            src : url(fonts/NanumGothic.ttf) format(truetype);
+            src : url(fonts/NanumGothic.woff) format ('wolf');
+        }
+        body {
+            font-family: '돋움',dotum,helvetica, sans-serif;
+        }
+        .target {
+            font-family:'Nanum Gothic',sans-serif;
+        }
     </style>
 </head>
 
@@ -27,3 +37,9 @@
 </body>
 
 </html>
+<!-- font-face폰트 로드 
+    방식
+
+    장점:외부 서버의영향 없이 폰트 안정적 표현
+    단점:파일을 로드 할 때 자체 서버의 트래픽 소모
+-->
