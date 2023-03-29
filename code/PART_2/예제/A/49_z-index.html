@@ -12,7 +12,9 @@
             height: 200px;
             background: #ccc;
             position: relative;
+            z-index: 1;
         }
+        /* child1,2의 zindex 값이 높기 때문에 child3 의 zindex 값이 높아도 가장 아래에 있다. */
 
         .siblings {
             width: 200px;
@@ -21,6 +23,7 @@
             position: relative;
             top: -50px;
             left: 50px;
+            z-index: 0;
         }
 
         div[class^="child"] {
@@ -33,15 +36,25 @@
 
         .child1 {
             background: blue;
+            position : absolute;
+            left : 25px;
+            top : 75px;
+            z-index: 10;
         }
 
         .child2 {
             background: red;
+            position:absolute;
+            left:0;
+            top : 0;
+            z-index: 5;
         }
 
         .child3 {
             background: #fff;
-        }
+            z-index: 20;
+            /* z-index 값이 적용될려면 반드시 position 값이 있어야함  */
+            position : relative;        }
     </style>
 </head>
 
@@ -56,3 +69,7 @@
 </body>
 
 </html>
+<!-- z-index 369p
+웹페이지는 3d로 구성되어 있다. x,y,z 축으로 있어서 요소를 멀리 보이거나 가깝게 보이게 할 수 있다.
+
+-->

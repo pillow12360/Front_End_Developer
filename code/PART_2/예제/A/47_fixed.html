@@ -19,7 +19,12 @@
             font-weight: bold;
             text-transform: uppercase;
             text-decoration: none; 
+            position:fixed;
+            /* 무조건 브라우저 화면에 버튼이 위치 시키도록 하는 position : fixed; 스크롤 하여도 같은 곳에 머무른다. */
+            bottom:50px;
+            right:200px;
         }
+
     </style>
 </head>
 
@@ -79,3 +84,10 @@
     </div>
 </body>
 </html>
+<!-- fixed 363p 
+1. 요소의 위치를 다른 요소들이 모르게 된다. (무시)
+2. 요소의 크기가 내용의 크기로 축소된다.
+3. 브라우저 화면이 기준이 된다. (*)
+4. left, right, top ,bottom 값으로 위치를 설정한다.
+
+-->

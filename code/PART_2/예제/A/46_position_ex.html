@@ -9,9 +9,16 @@
     <style>
         .slidewrapper{
             width: 600px;
+            /* 넓이 */
             height:400px;
-            margin:0 auto;
+            /* 높이 */
+            margin:0 auto; 
+            /* 가운데로 맞춤 */
             background:#ebebeb;
+            /* 배경 색 */
+            position:relative;
+            /* 자기 자신을 기준으로 포지션 자기 자신을 기준으로 
+            포지션의 값을 기본값으로 하면서 자기자신을 기준으로 선택할 대 relative 사용 */
         }
         .btn{
             padding:0 20px;
@@ -20,6 +27,18 @@
             background: #000;
             text-decoration: none;
             display:inline-block;
+            position: absolute;
+            top: 50%;
+            /* slidewrapper을 기준으로 위에서 50%만큼 아래로 내려옴 */
+            margin-top:-25px;
+            /* 해당 크기의 반만큼 50px의 반인 25px만큼 위로 올라가야 정중앙에 위치 */
+        }
+        .prev{ 
+        right:calc(100% + 20px);
+        }
+        .next{
+        left:calc(100% + 20px);
+        /* clac  연산자엔 부호 사이에 반드시 공백 있어야 함  */
         }
     </style>
 </head>
@@ -35,3 +54,10 @@
 
 </body>
 </html>
+<!-- position 응용 355p
+다양하게 버튼들을 이동해보며 이동의 기준이 되는 display:relative;의 특징 
+실습 하면서 학습 
+포지션 absolute 실습 
+absolute는 자기 자신이 기준이 됨.
+
+-->

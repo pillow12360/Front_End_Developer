@@ -40,7 +40,11 @@
         .content,
         .sidebar {
             float: left;
+            position:sticky;
+            top:10px;
         }
+        /* side bar 가 상단에 있다가
+아래로 스크롤 시 top : 0; 위치에 고정된다.  */
 
         .cf:after {
             content: " ";
@@ -85,3 +89,10 @@
 </body>
 
 </html>
+<!-- sticky 365p 
+sticky는 기본적으로 스크롤이 컨텐츠와 같이 움직이다 지정한 위치에 도달하면 fixted 와 같이 화면에 고정된다.
+
+
+
+
+-->
