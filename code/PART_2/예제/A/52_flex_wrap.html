@@ -12,6 +12,8 @@
             margin: 20px;
             border: 1px solid;
             display: flex;
+            /* 자식 요소의 너비의 합이 더 크지만 아래로 쌓여서 배치되지 않고 가로로 배치됨 */
+            flex-wrap : nowrap;
 
         }
 
@@ -22,7 +24,9 @@
             padding: 10px;
         }
 
-        .nowrap {}
+        .nowrap {
+            flex-wrap:wrap;
+        }
     </style>
 </head>
 
@@ -44,3 +48,12 @@
 </body>
 
 </html>
+<!-- flex-wrap 381p  
+플렉스 아이템들의 너비가 부모 요소인 플렉스 박스 보다 클 경우 넘치는 요소를 교차축 방향으로 쌓을지 결정하는 속성입니다.
+
+
+
+
+
+
+-->
