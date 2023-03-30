@@ -7,13 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flexible box basic</title>
     <style>
-        .parent {}
+        .parent {
+            display : flex;
+        }
+        /* 부모요소에 flex를 지정하면 자식요소는 자동으로 가로배치된다. */
 
         .parent div {
             background: #ebebeb;
             border: #ccc 1px solid;
             padding: 10px;
         }
+        /* 인라인 요소로 변경되어 가로한 블럭을 차지 하지 않고 자식 요소의 너비 만큼만 인지됨 */
     </style>
 </head>
 
