@@ -20,6 +20,18 @@
             padding: 10px;
             text-transform: uppercase;
         }
+        .parent div:nth-child(1){
+            order:2;
+        }
+        .parent div:nth-child(2){
+            order:3;
+        }
+        .parent div:nth-child(3){
+            order:1;
+        }
+        .parent div:nth-child(2){
+            order:-1;
+        }
     </style>
 </head>
 
@@ -33,3 +45,10 @@
 </body>
 
 </html>
+<!-- order 394p
+BOX3 가 가장 먼저나타나도록 설정해보기
+
+order값을 1을 설정하여 다른요소보다 작게 설정하여 먼저 나타나도록 함
+
+값을 음수값으로 지정해줄 수 도 있음 
+-->

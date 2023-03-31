@@ -12,7 +12,10 @@
             display: flex;
             border: 1px solid
         }
-
+        .parent .grow {
+            flex-grow : 1;
+        }
+        /* flex-grow로 크기를 키워 여백 채우기 값을 1로 설정하면 모두 차지하게 됨*/
         .parent div {
             width: 100px;
             height: 50px;
@@ -26,6 +29,39 @@
         .shrink div {
             width: 200px;
         }
+        /* 현재 shrink 값이 1로 설정 되어 있어 넘치지 않게 조금씩 크기를 줄여 조정되고 있음
+        값이 1이면 1:1:1비율로 설정하여 축소되어있음
+        */
+        .shrink div:last-child{
+            flex-shrink:2;
+        }
+        /* 이설정으로 인해 비율이 1:1:2로 설정되어 변경된다. */
+        .parent .basis {
+            flex-basis: 180px;
+        }
+        /* flex-basis 는 플렉스 아이템의 크기를 지정하는 것 기본값은 0 플렉스 아이템 내부의 컨텐츠의 크기만큼 인식이 됨 auto와 같은 값 */
+        /* 마지막으로 flex로 gorw shrink basis는 하나의 속성인 flex로 한꺼번에 조정 가능 */
+        /* .all div{
+            flex : 1 1 0;
+        } */
+        /* 앞부터 grow shrink basis 값이다. */
+        /* .all div:nth-child(1){
+            flex: 1 ;
+        }
+        .all div:nth-child(2){
+            flex: 1 ;
+        }
+        .all div:nth-child(3){
+            flex: 2 ;
+        } */
+        .all div {
+            flex : 1;
+            transition : 0.5s;
+        }
+        .all div:hover {
+            flex : 2;
+        }
+        /* 마우스를 올려두었을 때 너비가 늘어나고 나머지 요소들의 너비가 줄어듦 */
     </style>
 </head>
 
@@ -58,3 +94,6 @@
 </body>
 
 </html>
+
+<!-- 396p 플렉스 박스에 여백이 있을때 플렉스 아이템들의 크기를 키워 여백을 채워주게 해줌-->
+<!-- css 초급 마무리  -->
