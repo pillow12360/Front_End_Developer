@@ -144,3 +144,18 @@ const doggy = {
 for (let key in doggy){
   console.log(`${key}: ${doggy[key]}`);
 }
+
+// 배열 내장 함수
+
+// forEach 원소 모두 출력 
+const superheroes = ['아이언맨', '캡틴 아메리카', '토르', '닥터 스트레인지'];
+
+superheroes.forEach(hero=>{
+  console.log(hero);
+});
+
+// 객체 생성자
+
+// 객체 생성자는 함수를 통해 새로운 객체를 만들고 그안에 넣고 싶은 값 혹은 함수들을 구현 할 수 있게 해준다.
+
+function Animal(typepilee)
