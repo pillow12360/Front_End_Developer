@@ -7,23 +7,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>shadow</title>
     <style>
-        .text {}
-
+        .text {
+            /* text-shadow : -10px -10px 0 rgba(0,0,0,0.5); */
+            /* 텍스트 쉐도우 : 가로 세로 흐릿한정도 색상*/
+            /* 글자와 같은 그림자 생성 검은색에 투명도 50% */
+            text-shadow : 0 0 5px rgba(0,0,0,0.5);
+            /* 수치를 0으로 하면 사방으로 퍼지는 그림자 생성 */
+        }
+        
         .box {
             width: 200px;
             border: 1px solid #ccc;
-
+            /* box-shadow: 10px 10px 5px 10px rgba(0,0,0,.2); */
+            /* box-shadow : 가로 세로 블러 spread 색상 */
+            /* spead:전체적으로 10px 더 커짐 */
+            box-shadow: inset 5px 5px rgba(0,0,0,.1);
+            /* inset으로 안쪽으로 그림자 생성 */
         }
 
         input {
+            outline: none;
             border: 1px solid #ccc;
         }
+        input:focus{
+            box-shadow: inset 0 0 3px rgba(0,0,255,.5);
+        }
+        /* 포커스 했을 때 안쪽으로 그림자 생성 */
 
         .modal {
             width: 300px;
             height: 100px;
             border: 1px solid #ccc;
             background: #fff;
+            position : fixed;
+            left:50%;
+            top:50%;
+            margin-left : -150px;
+            margin-top: -50px;
+            box-shadow: 3px 3px 5px rgba(0,0,0,.3);
+
         }
     </style>
 </head>
