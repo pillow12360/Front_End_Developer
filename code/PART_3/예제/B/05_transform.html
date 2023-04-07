@@ -15,9 +15,19 @@
         img {
             transition: 0.4s;
         }
+        .translate {
+            perspective:100px;
+            perspective-origin:0 0;
+        }
+        /* 카메라 위치를 포토의 0,0 위치로 이동 */
         .translate:hover img{
-            transform : translateX(50px);
+            /* transform : translateX(50px);
+            transform: translateY(-50px); */
             /* 마우스를 올렸을때 x축 우측으로 50px이동 */
+
+            /* transform: translate(50px,-50px); */
+            /* x축 y축 둘다 적용 */
+            transform: translateZ(100px);        
         }
     </style>
 </head>
