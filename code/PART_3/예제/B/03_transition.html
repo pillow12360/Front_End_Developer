@@ -9,8 +9,15 @@
     <style>
         div img {
             width: 200px;
+            /*transition-property: width;
+            transition-duration: 0.3s;
+            transition-delay: 0s;
+            transition-timing-function: cubic-bezier(.81,.29,.27,1.2); */
+            transition: transform 0.6s cubic-bezier(0.61, 1, 0.88, 1);
+            /* 한 문장으로 구현한 것 */
         }
-
+/* 마우스를 이미지에 올리면 이미지의 크기가 전환되는 과정이 지정되는 속도 모델로 움직인다. */
+/* ease는 느리다는 듯 */
         div img:hover {
             width: 400px;
         }
@@ -24,3 +31,9 @@
 </body>
 
 </html>
+
+<!-- transition css에서 수치로 구현하는 속성들의 값이 전환 되는 과정을 화면에 보여주는 애니메이션
+435p
+
+
+-->
