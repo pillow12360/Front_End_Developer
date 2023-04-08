@@ -15,6 +15,20 @@
         img {
             transition: 0.4s;
         }
+        .translate {
+            perspective:100px;
+            perspective-origin:0 0;
+        }
+        /* 카메라 위치를 포토의 0,0 위치로 이동 */
+        .translate:hover img{
+            /* transform : translateX(50px);
+            transform: translateY(-50px); */
+            /* 마우스를 올렸을때 x축 우측으로 50px이동 */
+
+            /* transform: translate(50px,-50px); */
+            /* x축 y축 둘다 적용 */
+            transform: translateZ(100px);        
+        }
     </style>
 </head>
 
@@ -56,3 +70,11 @@
 </body>
 
 </html>
+<!-- transform 451p
+    가상으로(다른 요소들의 위치에 영향 주지 않고)이동, 축소, 확대, 회전, 비틀기 등 애니메이션 적용 450p
+웹페이지는 3차원이라는 것을 이해한다.
+
+x,y,z 축이 있다.
+
+
+-->

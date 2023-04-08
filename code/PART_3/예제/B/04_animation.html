@@ -11,13 +11,84 @@
             width: 100px;
             height: 100px;
             background: green;
+            animation-name: changecolor;
+            animation-duration: 2s;
+            animation-delay : 1s;
+            /* 사각형의 색상이 블루로 변했다가 그린으로 돌아옴 */
+            animation-fill-mode : forwards;
+            /* 블루로 고정하기 위해 진행방향 멈추도록 설정 */
+            animation-iteration-count: infinite;
+            /* 반복횟수 설정 : 무한대 */
+            animation-direction: reverse;
+            /* 키프레임 진행방향 반대로 */
+
+            /* 속성 축약 */
+            /* animation : changecolor 2s 1s forwards infinite reverse */
         }
+
+        .box:hover{
+            animation: changecolor 2s 1s forward infinite reverse;
+        }
+        /* 마우스를 올려놓았을때 애니메이션 설정 위에 설정과 동일 */
+        /* .box.active{
+        animation: changecolor 2s 1s forward infinite reverse;
+        } */
+        /* 추후 자바스크립트 적용을 위한 active 클래스 선택자 사용  */
+
+        @keyframes changecolor {
+            /* 0% {background-color: green;}
+            100% {background-color: blue;} */
+            from {
+                background-color: green;            
+            }
+            /* 처음 */
+            50% {
+                background-color: blue;
+            }
+            /* 중간 */
+            to {
+                background-color: yellow;
+            }
+            /* 끝 */
+        }
+
+        /* 타이틀 애니메이션 
+        페이지가 열리면 제목, 설명, 링크 등이 아래쪽에서 위로 올라오면서 나타나는 애니메이션 구현 
+
+        */
+
+        header>* {
+            position : relative;
+            opacity : 0;
+            /* 투명도 0 안보이다가 */
+            top : 40px;
+            animation : fadeUp 0.5s forwards;
+            /* 보이게 설정  */
+        }
+        header h1{
+        animation-delay: 0.1s;
+        }
+        header p{
+            animation-delay : 0.2s;
+        }
+        header a{
+            animation-delay: 0.3s;
+        }
+        /* 태그마다 딜레이를 다르게 설정하여 서로 다르게 나타나도록 설정 */
+        @keyframes fadeUp{
+            from{opacity : 0; top:40px}
+            to{opacity : 1; top:0}
+        }
+
+
+
     </style>
 </head>
 
 <body>
     <div class="box">box</div>
     <hr>
+    <!-- 주의사항 hr 태그는 움직이면 안된다.  -->
     <!--  
         아래쪽으로 40px 내려가고 있고, 투명도 0
         순차적으로(0.1s간격) 위로(원래위치)올라오고 투명도 1
@@ -35,3 +106,10 @@
 </body>
 
 </html>
+
+<!-- animaion 애니메이션 440p
+애니메이션은 해당 페이지가 로드되자마자 작동하는 애니메이션 효과
+
+
+
+-->
