@@ -16,7 +16,7 @@
             transition: 0.4s;
         }
         .translate {
-            perspective:100px;
+            perspective:1000px;
             perspective-origin:0 0;
         }
         /* 카메라 위치를 포토의 0,0 위치로 이동 */
@@ -27,8 +27,40 @@
 
             /* transform: translate(50px,-50px); */
             /* x축 y축 둘다 적용 */
-            transform: translateZ(100px);        
+            /* transform: translateZ(50px);     */
+            /* z축으로 100px 이동 */
+
+            /* transform:translateZ(100px);*/
+            transform:translate3d(50px,50px,100px);
         }
+
+        .scale img{
+            transform-origin: 0 100%;
+            transform: perspective(500px) sclaeZ(1) translateZ(100px);
+        }
+        .scale:hover img{
+            /* transform:scale(1.5); */
+            /* 크기 1.5배 확대 기본값은 이미지 정 가운데 */
+            transform: perspective(500px) scaleZ(2) translateZ(100px);
+            /* translateZ : translateZ값으로 이동한 거리를 확대 축소 */
+        }
+
+        .rotate:hover img {
+            /* transform : perspective(500px) rotateX(45deg); */
+            /* x축으로 45도 누움 */
+            transform : perspective(500px) rotateY(45deg);
+            /* y축으로 45도 누움 */
+        }
+        /*-transform : rotate(45deg) */
+        /* 45도 돌려줌 */
+
+        .skew:hover img {
+            transform : skewX(20deg);
+            /* transform : skewY(20deg) */
+            /* x또는 y축으로 비틀기 */
+        }
+
+        
     </style>
 </head>
 
